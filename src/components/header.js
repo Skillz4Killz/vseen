@@ -1,32 +1,49 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import Logo from "../components/logo"
+import VSEENLogo from "../images/VSEEN-LOGO-WHITE.png"
+
+import "./header.css"
 
 const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
+  <header>
     <div
       style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
+        background: "rgba(0, 0, 0, 0.8)",
+        paddingTop: "6px",
+        textDecoration: "none",
+        position: "fixed",
+        width: "100%",
+        top: "0",
+        zIndex: "10000",
       }}
     >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
+      <Link to="/">
+        <img src={VSEENLogo} className="logo"></img>
+      </Link>
+      <ul className="navbar">
+        <li className="buttonheader">
+          <Link to="/about" className="tab">
+            ABOUT
+          </Link>
+        </li>
+        <li className="buttonheader">
+          <Link to="/news" className="tab">
+            NEWS
+          </Link>
+        </li>
+        <li className="buttonheader">
+          <Link to="/careers" className="tab">
+            CAREERS
+          </Link>
+        </li>
+        <li className="buttonheader">
+          <Link to="/request-a-quote" className="tab">
+            REQUEST A QUOTE
+          </Link>
+        </li>
+      </ul>
     </div>
   </header>
 )

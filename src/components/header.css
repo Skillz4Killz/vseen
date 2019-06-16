@@ -1,0 +1,28 @@
+.navbar {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin-bottom: -6px;
+  position: relative;
+  color: aqua;
+  
+}
+
+.logo {
+  position: absolute;
+}
+
+.tab {
+  display: flex;
+  flex-direction: column;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.buttonheader {
+  margin-left: 18px;
+}
+
+.buttonheader a {
+  font-size: 14px;
+}
